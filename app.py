@@ -16,47 +16,16 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
-/* Keep form labels highly readable on light/gradient backgrounds */
-.stApp label,
-.stApp .stSelectbox label,
-.stApp .stTextInput label,
-.stApp .stTextArea label {
-    color: #172033 !important;
-    font-weight: 700 !important;
-    font-size: 0.98rem !important;
-    letter-spacing: 0.01em !important;
-}
-
-/* Streamlit's label text can inherit low-contrast theme colors */
-.stApp [data-testid="stWidgetLabel"] p,
-.stApp [data-testid="stWidgetLabel"] label,
-.stApp [data-testid="stWidgetLabel"] div {
-    color: #172033 !important;
-}
-
-/* Make inputs clean and professional */
-.stApp input,
-.stApp textarea,
-.stApp [data-baseweb="select"] > div {
-    border-radius: 12px !important;
-}
-
-/* Slightly stronger section headings */
-.stApp h1,
-.stApp h2,
-.stApp h3 {
-    color: #111827 !important;
-}
-
-/* Mobile readability */
+/* Keep the existing desktop/laptop design unchanged.
+   Only improve form-label visibility on small screens. */
 @media (max-width: 768px) {
-    .stApp label,
     .stApp [data-testid="stWidgetLabel"] p,
     .stApp [data-testid="stWidgetLabel"] label,
     .stApp [data-testid="stWidgetLabel"] div {
         color: #111827 !important;
-        font-size: 0.95rem !important;
-        font-weight: 750 !important;
+        font-weight: 800 !important;
+        font-size: 1rem !important;
+        line-height: 1.3 !important;
     }
 }
 </style>
@@ -288,4 +257,6 @@ Generate the complete content now.
 st.markdown('<div class="footer">AI Content Assistant · POWERED BY MHS</div>', unsafe_allow_html=True)
 
         
+   
+      
    
