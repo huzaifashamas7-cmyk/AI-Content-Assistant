@@ -11,85 +11,53 @@ st.set_page_config(
 # -----------------------------
 # Modern MHS UI
 # -----------------------------
+# -----------------------------
+# Professional responsive UI
+# -----------------------------
 st.markdown("""
 <style>
-.stApp {
-    background:
-        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.18), transparent 30%),
-        radial-gradient(circle at 90% 15%, rgba(59, 130, 246, 0.16), transparent 30%),
-        radial-gradient(circle at 80% 90%, rgba(236, 72, 153, 0.12), transparent 30%),
-        linear-gradient(135deg, #f8f7ff 0%, #eef5ff 50%, #fff7fc 100%);
+/* Keep form labels highly readable on light/gradient backgrounds */
+.stApp label,
+.stApp .stSelectbox label,
+.stApp .stTextInput label,
+.stApp .stTextArea label {
+    color: #172033 !important;
+    font-weight: 700 !important;
+    font-size: 0.98rem !important;
+    letter-spacing: 0.01em !important;
 }
-.block-container {
-    max-width: 1050px;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+
+/* Streamlit's label text can inherit low-contrast theme colors */
+.stApp [data-testid="stWidgetLabel"] p,
+.stApp [data-testid="stWidgetLabel"] label,
+.stApp [data-testid="stWidgetLabel"] div {
+    color: #172033 !important;
 }
-.hero {
-    padding: 1.7rem 2rem;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #ffffff, #f0f2ff);
-    border: 1px solid #e7e9f5;
-    box-shadow: 0 10px 35px rgba(40,45,90,.07);
-    margin-bottom: 1.5rem;
-}
-.badge {
-    display: inline-block;
-    padding: .35rem .75rem;
-    border-radius: 999px;
-    background: #eceaff;
-    color: #5b50c9;
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-.hero h1 {
-    margin: .45rem 0 .2rem 0;
-    color: #25283b;
-    font-size: 2.6rem;
-    letter-spacing: -1px;
-}
-.hero p {
-    color: #73788b;
-    font-size: 1.02rem;
-    margin: 0;
-}
-.section-title {
-    font-size: 1.35rem;
-    font-weight: 750;
-    color: #292c40;
-    margin: .8rem 0 .8rem;
-}
-.card {
-    background: rgba(255,255,255,.94);
-    border: 1px solid #e7e9f0;
-    border-radius: 20px;
-    padding: 1rem 1.2rem .55rem;
-    box-shadow: 0 8px 28px rgba(40,45,90,.05);
-}
-div[data-baseweb="select"] > div,
-div[data-baseweb="input"] > div,
-textarea {
+
+/* Make inputs clean and professional */
+.stApp input,
+.stApp textarea,
+.stApp [data-baseweb="select"] > div {
     border-radius: 12px !important;
 }
-.stButton > button {
-    border-radius: 12px;
-    min-height: 3rem;
-    font-weight: 750;
+
+/* Slightly stronger section headings */
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #111827 !important;
 }
-.stDownloadButton > button {
-    border-radius: 12px;
-    font-weight: 700;
-}
-.footer {
-    text-align: center;
-    color: #8b90a3;
-    font-size: .8rem;
-    margin-top: 2rem;
-}
-@media (max-width: 700px) {
-    .hero h1 { font-size: 2rem; }
-    .block-container { padding-left: 1rem; padding-right: 1rem; }
+
+/* Mobile readability */
+@media (max-width: 768px) {
+    .stApp label,
+    .stApp [data-testid="stWidgetLabel"] p,
+    .stApp [data-testid="stWidgetLabel"] label,
+    .stApp [data-testid="stWidgetLabel"] div {
+        color: #111827 !important;
+        font-size: 0.95rem !important;
+        font-weight: 750 !important;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -127,6 +95,7 @@ api_key = sidebar_key.strip() or api_key
 # -----------------------------
 # User inputs
 # -----------------------------
+st.markdown("### 📝 Content Details")
 st.markdown('<div class="section-title">🎯 Content Settings</div>', unsafe_allow_html=True)
 st.markdown('<div class="card">', unsafe_allow_html=True)
 
