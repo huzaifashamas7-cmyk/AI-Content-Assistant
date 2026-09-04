@@ -14,7 +14,11 @@ st.set_page_config(
 st.markdown("""
 <style>
 .stApp {
-    background: linear-gradient(135deg, #f7f8ff 0%, #ffffff 50%, #f5f7ff 100%);
+    background:
+        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 15%, rgba(59, 130, 246, 0.16), transparent 30%),
+        radial-gradient(circle at 80% 90%, rgba(236, 72, 153, 0.12), transparent 30%),
+        linear-gradient(135deg, #f8f7ff 0%, #eef5ff 50%, #fff7fc 100%);
 }
 .block-container {
     max-width: 1050px;
