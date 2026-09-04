@@ -97,7 +97,7 @@ textarea {
 st.markdown("""
 <div class="hero">
     <span class="badge">POWERED BY MHS</span>
-    <h1>✍️ AI Content Assistant</h1>
+    <h1>✍️ AI Content Assistant App</h1>
     <p>Turn your ideas into engaging, platform-ready content in seconds.</p>
 </div>
 """, unsafe_allow_html=True)
