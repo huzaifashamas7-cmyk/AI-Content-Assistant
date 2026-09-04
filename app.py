@@ -16,21 +16,29 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
-/* Keep the existing desktop/laptop design unchanged.
-   Only improve form-label visibility on small screens. */
+
+/* Desktop/laptop: keep the existing design unchanged */
+
+/* Mobile only */
 @media (max-width: 768px) {
-    .stApp [data-testid="stWidgetLabel"] p,
-    .stApp [data-testid="stWidgetLabel"] label,
-    .stApp [data-testid="stWidgetLabel"] div {
-        color: #111827 !important;
+
+    /* Make Streamlit field labels clearly visible */
+    div[data-testid="stWidgetLabel"],
+    div[data-testid="stWidgetLabel"] *,
+    div[data-testid="stWidgetLabel"] p,
+    div[data-testid="stWidgetLabel"] label,
+    div[data-testid="stWidgetLabel"] span {
+        color: #FFFFFF !important;
         font-weight: 800 !important;
         font-size: 1rem !important;
-        line-height: 1.3 !important;
+        line-height: 1.4 !important;
+        opacity: 1 !important;
     }
+
 }
+
 </style>
 """, unsafe_allow_html=True)
-
 st.markdown("""
 <div class="hero">
     <span class="badge">POWERED BY MHS</span>
